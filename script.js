@@ -21,14 +21,13 @@ function handleItemForm(event, formRef) {
     return false;
 }
 
-function    addItemToShoppingList() {
+function addItemToShoppingList() {
     let itemName = document.getElementById("item-name");
     let itemAmount = document.getElementById("item-amount");
-    let id = getRandomInt(0, 1000000);
+    let id = getRandomInt(0, 10000000);
 
-    // Creates list item HTML and appends to the page.
+    // Creates list item html and appends to page.
     let itemHtml = createListItemHtml(itemName.value, itemAmount.value, id);
-    console.log("itemHtml: ", itemHtml);
     let itemListRef = document.getElementById("shopping-list");
     itemListRef.insertAdjacentHTML("afterend", itemHtml);
 
